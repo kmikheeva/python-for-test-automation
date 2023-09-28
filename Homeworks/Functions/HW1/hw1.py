@@ -44,21 +44,21 @@ def validate_email(email: str) -> bool:
 
 
 def validate_amount(amount: str) -> bool:
-    email = amount.split()[1]
+    amount = amount.split()[1]
     amount_pattern = r'^\d+\.\d{2}$'
-    return bool(re.match(amount_pattern, email))
+    return bool(re.match(amount_pattern, amount))
 
 
 def validate_currency(currency: str) -> bool:
-    email = currency.split()[2]
+    currency = currency.split()[2]
     currency_pattern = r'^[A-Z]{3}$'
-    return bool(re.match(currency_pattern, email))
+    return bool(re.match(currency_pattern, currency))
 
 
 def validate_account(account: str) -> bool:
-    email = account.split()[2]
+    account = account.split()[2]
     account_pattern = r'^[a-zA-Z]*[0-9]*[a-zA-Z]*$'
-    return bool(re.match(account_pattern, email))
+    return bool(re.match(account_pattern, account))
 
 
 def validate_date(date: str) -> bool:
